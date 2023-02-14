@@ -51,6 +51,8 @@ h2, h3 {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
+    border: 4px black solid;
+    padding: 20px 0;
 }
 
 .show-hand {
@@ -65,3 +67,37 @@ h2, h3 {
 #comp-hand {
     background-color: yellow;
 }
+
+/* Score Area */
+
+#score-area {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#score-area>h2 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+#scoreboard {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* Reset Score button */
+
+#reset {
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    color: white;
+    background-color: #380477;
+    border: 2px solid #000000;
+    padding: 0 15px;
+    margin: 0 30px;
+}
+
