@@ -7,6 +7,8 @@
     border: 0;
 }
 
+/* Headings */ 
+
 h1 {
     font-family: Kanit, sans-serif;
     font-weight: 900;
@@ -21,20 +23,45 @@ h2, h3 {
     text-align: center;
 }
 
+/* Hand seclection buttons */
+
 #selection {
     display: flex;
     width: 75%;
-    margin: auto;
+    margin: 30px auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: center;
 }
 
 .hand-buttons {
+    background-color: white;
     border: 4px black solid;
     border-radius: 50%;
     display: flex;
     content-visibility: auto;
     width: 120px;
     height: 120px;
+}
+
+/* Game Area */
+
+#game-area {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.show-hand {
+    width: 40%;
+    height: 300px;
+}
+
+#human-hand {
+    background-color: red;
+}
+
+#comp-hand {
+    background-color: yellow;
 }
