@@ -6,16 +6,20 @@ const hands = document.getElementsByClassName('hand-buttons');
 // enable computer decision
 function computerHand() {
     const randomNum = Math.floor(Math.random() * choices.length);
-    return choices[randomNum];
+    let compChoice = choices[randomNum];
+    console.log(compChoice);
+    compImage.style.backgroundImage = `url(/assets/images/${choices[randomNum]}.png)`;
+    return compChoice;
 }
-
 
 // need event listener for the buttons
 // make buttons listen for a click by user
+// call both userHand and computerHand functions
 for (let hand of hands) {
     hand.addEventListener('click', function () {
         let userChoice = this.getAttribute("value");
         userHand(userChoice);
+        computerHand();
         console.log(userChoice);
     });
 };
@@ -23,9 +27,11 @@ for (let hand of hands) {
 // change user image to hand choice image
 function userHand(userChoice) {
     userImage.style.backgroundImage = `url(/assets/images/${userChoice}.png)`;
+
 }
 
 // calculate the winner
+// if else if
 function onClick() {
 
 }
