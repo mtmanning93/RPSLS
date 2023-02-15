@@ -1,17 +1,20 @@
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
+
 let userImage = document.getElementById('human-hand');
 let compImage = document.getElementById('comp-hand');
-
 
 // enable computer decision
 // print computer choice where compImage is
 
 function computerHand() {
+
     const randomNum = Math.floor(Math.random() * choices.length);
-    let compChoice = choices[randomNum];
-    console.log(compChoice);
-    compImage.style.backgroundImage = `url(/assets/images/${choices[randomNum]}.png)`;
+    
+    const compChoice = choices[randomNum];
+    const compSelection = `url(/assets/images/${choices[randomNum]}.png)`;
+    compImage.style.backgroundImage = compSelection;
+
     return compChoice;
 }
 
@@ -21,51 +24,45 @@ function computerHand() {
 
 for (let hand of hands) {
     hand.addEventListener('click', function () {
-        let userChoice = this.getAttribute("value");
-        userHand(userChoice);
-        computerHand();
-        console.log(userChoice);
+
+        const userChoice = this.getAttribute("value");
+
+        playGame(userHand(userChoice), computerHand());
     });
 };
 
-// change user image to hand choice image
+// change user image to hand image
 
 function userHand(userChoice) {
     userImage.style.backgroundImage = `url(/assets/images/${userChoice}.png)`;
+    return userChoice;
 }
 
-// calculate the winner
-// if else if
-function onClick() {
+// get the result of (computerHand, userChoice)
 
+const scoreBoard = document.querySelector('#scoreboard');
+let userScore = 0;
+let computerScore = 0;
 
+function playGame(userChoice, compChoice) {
 
-}
+    console.log(userChoice, compChoice)
 
-// get the result of (computerHand, userHand)
-function getScore(userHand, computerHand) {
-    let userScore;
-    let computerScore;
-        
-    if (userHand === computerHand) {
-        score = 0;
-    } else if (userHand === 'rock' && computerHand === 'scissors' || computerHand === 'lizard') {
-        userScore = 1
-    } else if (userHand === 'paper' && computerHand === 'rock' || computerHand === 'spock') {
-        userScore = 1
-    } else if (userHand === 'scissors' && computerHand === 'paper' || computerHand === 'lizard') {
-        userScore = 1
-    } else if (userHand === 'lizard' && computerHand === 'paper' || computerHand === 'spock') {
-        userScore = 1
-    } else if (userHand === 'spock' && computerHand === 'rock' || computerHand === 'scissors') {
-        userScore = 1
+    if (userChoice === compChoice) {
+        userScore++;
+        computerScore++;
+    } else if ((userChoice === 'rock' && (compChoice === 'scissors' || compChoice === 'lizard')) 
+        || (userChoice === 'paper' && (compChoice === 'rock' || compChoice === 'spock')) 
+        || (userChoice === 'scissors' && (compChoice === 'paper' || compChoice === 'lizard')) 
+        || (userChoice === 'lizard' && (compChoice === 'paper' || compChoice === 'spock')) 
+        || (userChoice === 'spock' && (compChoice === 'rock' || compChoice === 'scissors'))) {
+        userScore ++;
     } else {
-        computerScore = 1
+        computerScore ++;
     };
-}
+   
+    scoreBoard.innerHTML = userScore + ' : ' + computerScore;
 
-// show result of computerHand() and userHand() in scoreboard
-function showScore () {
-
-}
+    return (userScore, computerScore);
+};
 
