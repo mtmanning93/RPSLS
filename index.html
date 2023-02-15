@@ -31,28 +31,62 @@
             <img src="assets/images/spock.png" alt="A symbol of a hand shaped like the Star Trek character Spocks hand signal">
         </button>
     </div>
-    <div id="game-area">
-        <div id="video">
-            <h2 id="rules-heading">Game Rules</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div>
-                
-                
+
+    <!--Initial page-->
+
+    <div id="opening-page" class="">
+        <div id="game-area">
+            <div>
                 <div id="human-hand" class="show-hand">
-                    <form id="submit-username-form" action="game.html">
-                        <div>
-                            <input type="username" class="name" id="username-input" placeholder="Enter Username" required>
-                        </div>
-                        <div>
-                            <input type="submit" id="submit-button" value="Play Game!">
-                        </div>
-                    </form>
+                    <div>
+                        <input type="username" class="name" id="username-input" placeholder="Enter Username" required>
+                    </div>
+                    <div>
+                        <button id="submit-button" onclick="enterGame()">Play Game!</button>
+                    </div>
                 </div>
-            
+            </div>
+            <div id="video">
+                <h2 id="rules-heading">Game Rules</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="game-rules">
+            <h2>Rules</h2>
+            <p>Scissors cuts Paper <i class="fa-solid fa-hand-back-fist"></i>
+                Paper covers Rock <i class="fa-solid fa-hand"></i>
+                Rock crushes Lizard <i class="fa-solid fa-hand-scissors"></i>
+                Lizard poisons Spock <i class="fa-solid fa-hand-lizard"></i>
+                Spock smashes Scissors <i class="fa-solid fa-hand-spock"></i> 
+                <br>
+                Scissors decapitates Lizard <i class="fa-solid fa-hand-back-fist"></i>
+                Lizard eats Paper <i class="fa-solid fa-hand"></i>
+                Paper disproves Spock <i class="fa-solid fa-hand-scissors"></i>
+                Spock vaporizes Rock <i class="fa-solid fa-hand-lizard"></i>
+                Rock crushes Scissors <i class="fa-solid fa-hand-spock"></i>
+            </p>
+        </div>
+    </div>
+
+    <!-- Game page -->
+
+    <div id="game-page" class="hidden">
+        <div id="game-area">
+            <div id="human-hand" class="show-hand">
+                <h2 class="name" id="username-game">Username</h2>
+            </div>
+            <div id="comp-hand" class="show-hand">
+                <h2 class="name">Computer</h2>
+            </div>
+        </div>
+        <div id="score-area">
+            <h2>Score</h2>
+            <div id="scoreboard"></div>
+            <button id="reset" onclick="restartGame()">Reset Game!</button>
         </div>
     </div>
     
     <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3440ecbefc.js" crossorigin="anonymous"></script>
 </body>
 </html>

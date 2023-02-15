@@ -3,11 +3,20 @@ const hands = document.getElementsByClassName('hand-buttons');
 let userImage = document.getElementById('human-hand');
 let compImage = document.getElementById('comp-hand');
 
-// On page load take user name input and alter username
+/**
+ * 
+ * Then you start the game with all the game.html stuff with a class of hidden. 
+ * Then in the javascript after collecting the name input you add a class of hidden to all of the index.html elements. 
+ * Thus effectively giving you a page change without actually changing page :)
+ */
 
-function loadUsername() {
-    
-}
+function enterGame() {
+    username = document.getElementById('username-input').value;
+    document.getElementById("username-game").innerHTML = username;
+
+    document.getElementById('opening-page').classList.add('hidden');
+    document.getElementById('game-page').classList.remove('hidden');
+};
 
 // enable computer decision
 // print computer choice where compImage is
@@ -21,7 +30,7 @@ function computerHand() {
     compImage.style.backgroundImage = compSelection;
 
     return compChoice;
-}
+};
 
 // need event listener for the buttons
 // make buttons listen for a click by user
@@ -66,7 +75,7 @@ function playGame(userChoice, compChoice) {
         computerScore ++;
     };
    
-    scoreBoard.innerHTML = userScore + ' : ' + computerScore;
+    scoreBoard.innerHTML = `${username}` + ' ' + userScore + ' : ' + computerScore + ' Computer';
 
     return (userScore, computerScore);
 };

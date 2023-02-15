@@ -7,6 +7,12 @@
     border: 0;
 }
 
+/* Hidden */
+
+.hidden {
+    display: none;
+}
+
 /* Headings */ 
 
 h1 {
@@ -28,7 +34,7 @@ h2, h3 {
 #selection {
     display: flex;
     width: 75%;
-    margin: 30px auto;
+    margin: 20px auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: center;
@@ -66,14 +72,6 @@ h2, h3 {
 
 /* Username Input */
 
-#submit-username-form {
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        justify-content: center;
-}
-
 #username-input {
     font-size: 1.5em;
     text-align: center;
@@ -87,6 +85,16 @@ h2, h3 {
     background-color: #3e0362;
     color: white;
     box-shadow: 0px 11px 14px 12px #270934;
+}
+
+/* Rules */
+
+#game-rules {
+    width: 65%;
+    margin: 20px auto;
+    text-align: center;
+    border: 4px black solid;
+    padding: 10px 0px;
 }
 
 /* Game Area */
@@ -113,6 +121,10 @@ h2, h3 {
     background-image: url(/assets/images/user.webp);
     background-position: center;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
 }
 
 #comp-hand {
@@ -120,7 +132,8 @@ h2, h3 {
     background-position: center;
 }
 
-.name {
+.name, #username-game {
+    width: 100%;
     font-weight: 400;
     background-color: #380477;
     color: white;
@@ -137,13 +150,14 @@ h2, h3 {
 }
 
 #score-area>h2 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1;
 }
 
 #scoreboard {
     display: flex;
     font-size: 2em;
+    font-weight: 400;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
@@ -157,7 +171,9 @@ h2, h3 {
     font-size: 1em;
     color: white;
     background-color: #380477;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
     padding: 0 15px;
     margin: 0 30px;
+    box-shadow: 0px 11px 20px 12px #270934;
 }
