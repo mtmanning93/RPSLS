@@ -32,25 +32,19 @@
         </button>
     </div>
     <div id="game-area">
-        <div id="video">
-            <h2 id="rules-heading">Game Rules</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="human-hand" class="show-hand">
+            <h2 class="name" id="username-game" onload="loadUsername()">Username</h2>
+            <!--<img src="/assets/images/user.webp" alt="User icon to represent human player">-->
         </div>
-        <div>
-                
-                
-                <div id="human-hand" class="show-hand">
-                    <form id="submit-username-form" action="game.html">
-                        <div>
-                            <input type="username" class="name" id="username-input" placeholder="Enter Username" required>
-                        </div>
-                        <div>
-                            <input type="submit" id="submit-button" value="Play Game!">
-                        </div>
-                    </form>
-                </div>
-            
+        <div id="comp-hand" class="show-hand">
+            <h2 class="name">Computer</h2>
+            <!--<img src="/assets/images/comp.webp" alt="Computer icon to represent computed player">-->
         </div>
+    </div>
+    <div id="score-area">
+        <h2>Score</h2>
+        <div id="scoreboard"></div>
+        <button id="reset" onclick="restartGame()">Reset Game!</button>
     </div>
     
     <script src="assets/js/script.js"></script>

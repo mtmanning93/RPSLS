@@ -1,8 +1,13 @@
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
-
 let userImage = document.getElementById('human-hand');
 let compImage = document.getElementById('comp-hand');
+
+// On page load take user name input and alter username
+
+function loadUsername() {
+    
+}
 
 // enable computer decision
 // print computer choice where compImage is
@@ -49,8 +54,8 @@ function playGame(userChoice, compChoice) {
     console.log(userChoice, compChoice)
 
     if (userChoice === compChoice) {
-        userScore++;
-        computerScore++;
+        userScore;
+        computerScore;
     } else if ((userChoice === 'rock' && (compChoice === 'scissors' || compChoice === 'lizard')) 
         || (userChoice === 'paper' && (compChoice === 'rock' || compChoice === 'spock')) 
         || (userChoice === 'scissors' && (compChoice === 'paper' || compChoice === 'lizard')) 
@@ -64,5 +69,11 @@ function playGame(userChoice, compChoice) {
     scoreBoard.innerHTML = userScore + ' : ' + computerScore;
 
     return (userScore, computerScore);
+};
+
+// Restart Game Button Function
+
+function restartGame() {
+    window.location.reload();
 };
 

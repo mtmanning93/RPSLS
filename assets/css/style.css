@@ -47,6 +47,48 @@ h2, h3 {
     flex-wrap: wrap;
 }
 
+/* Video */
+
+#video {
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rules-heading {
+    color: white;
+    font-weight: 400;
+}
+
+/* Username Input */
+
+#submit-username-form {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+}
+
+#username-input {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#submit-button {
+    font-size: 1.5em;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 0 30px;
+    background-color: #3e0362;
+    color: white;
+    box-shadow: 0px 11px 14px 12px #270934;
+}
+
 /* Game Area */
 
 #game-area {
@@ -54,6 +96,7 @@ h2, h3 {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     border: 4px black solid;
     padding: 20px 0;
 }
@@ -69,6 +112,7 @@ h2, h3 {
 #human-hand {
     background-image: url(/assets/images/user.webp);
     background-position: center;
+    text-align: center;
 }
 
 #comp-hand {
