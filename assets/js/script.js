@@ -27,6 +27,8 @@ function computerHand() {
     
     const compChoice = choices[randomNum];
     const compSelection = `url(/assets/images/${choices[randomNum]}.png)`;
+    
+    compImage.style.backgroundRepeat = 'no-repeat';
     compImage.style.backgroundImage = compSelection;
 
     return compChoice;
@@ -52,7 +54,7 @@ function userHand(userChoice) {
     return userChoice;
 }
 
-// get the result of (computerHand, userChoice)
+// get the result of (compChoice, userChoice)
 
 const scoreBoard = document.querySelector('#scoreboard');
 let userScore = 0;
