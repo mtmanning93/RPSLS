@@ -51,6 +51,8 @@ for (let hand of hands) {
 
 function userHand(userChoice) {
     userImage.style.backgroundImage = `url(/assets/images/${userChoice}.png)`;
+    userImage.style.backgroundRepeat = 'no-repeat';
+    
     return userChoice;
 }
 
