@@ -1,8 +1,8 @@
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
-let userImage = document.getElementById('human-hand');
+let userImage = document.getElementsByClassName('human-hand')[1];
 let compImage = document.getElementById('comp-hand');
-
+let userChoice;
 /**
  * 
  * Then you start the game with all the game.html stuff with a class of hidden. 
@@ -41,7 +41,7 @@ function computerHand() {
 for (let hand of hands) {
     hand.addEventListener('click', function () {
 
-        const userChoice = this.getAttribute("value");
+        userChoice = this.getAttribute("value");
 
         playGame(userHand(userChoice), computerHand());
     });
@@ -50,11 +50,15 @@ for (let hand of hands) {
 // change user image to hand image
 
 function userHand(userChoice) {
+
     userImage.style.backgroundImage = `url(/assets/images/${userChoice}.png)`;
     userImage.style.backgroundRepeat = 'no-repeat';
-    
+   
+    console.log(userChoice);
+    console.log(userImage.style.backgroundImage);
+
     return userChoice;
-}
+};
 
 // get the result of (compChoice, userChoice)
 
@@ -89,4 +93,3 @@ function playGame(userChoice, compChoice) {
 function restartGame() {
     window.location.reload();
 };
-
