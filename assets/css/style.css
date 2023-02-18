@@ -17,6 +17,7 @@
 
 body {
     background: url(/assets/images/space-background.webp) no-repeat center center;
+    background-attachment: fixed;
 }
 
 /* Headings */ 
@@ -112,11 +113,13 @@ h2, h3 {
     padding: 0 30px;
     background-color: #3e0362;
     color: white;
-    box-shadow: 0px 11px 14px 12px #270934;
 }
 
 #submit-button:hover {
     cursor: pointer;
+    font-size: 2em;
+    transition: 0.8s;
+    box-shadow: 0px 11px 14px 12px #270934;
 }
 
 /* Rules */
@@ -196,6 +199,17 @@ h2, h3 {
     align-content: center;
 }
 
+#scoreboard>h2 {
+    margin: 0 20px;
+    line-height: 40px;
+}
+
+#user-scoreboard, #comp-scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 /* Reset Score button */
 
 #reset {
@@ -208,9 +222,11 @@ h2, h3 {
     border-radius: 5px;
     padding: 0 15px;
     margin: 0 30px;
-    box-shadow: 0px 11px 20px 12px #270934;
 }
 
 #reset:hover {
     cursor: pointer;
+    font-size: 2em;
+    transition: 0.8s;
+    box-shadow: 0px 11px 14px 12px #270934;
 }

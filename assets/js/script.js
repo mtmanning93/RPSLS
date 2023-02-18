@@ -62,7 +62,8 @@ function userHand(userChoice) {
 
 // get the result of (compChoice, userChoice)
 
-const scoreBoard = document.querySelector('#scoreboard');
+const userScoreboard = document.querySelector('#user-scoreboard');
+const compScoreboard = document.querySelector('#comp-scoreboard');
 let userScore = 0;
 let computerScore = 0;
 
@@ -83,7 +84,8 @@ function playGame(userChoice, compChoice) {
         computerScore ++;
     };
    
-    scoreBoard.innerHTML = `${username}` + ' ' + userScore + ' : ' + computerScore + ' Computer';
+    userScoreboard.innerHTML = `${username}` + ' ' + userScore + ' ';
+    compScoreboard.innerHTML = ' ' + computerScore + ' Computer';
 
     return (userScore, computerScore);
 };
