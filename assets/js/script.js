@@ -44,6 +44,7 @@ for (let hand of hands) {
         userChoice = this.getAttribute("value");
 
         playGame(userHand(userChoice), computerHand());
+        bestOf(userScore, computerScore);
     });
 };
 
@@ -74,6 +75,8 @@ function playGame(userChoice, compChoice) {
     if (userChoice === compChoice) {
         userScore;
         computerScore;
+        compImage.style.borderColor = 'black';
+        userImage.style.borderColor = 'black';
     } else if ((userChoice === 'rock' && (compChoice === 'scissors' || compChoice === 'lizard')) 
         || (userChoice === 'paper' && (compChoice === 'rock' || compChoice === 'spock')) 
         || (userChoice === 'scissors' && (compChoice === 'paper' || compChoice === 'lizard')) 
@@ -93,6 +96,25 @@ function playGame(userChoice, compChoice) {
 
     return (userScore, computerScore);
 };
+
+// Best Of Function
+
+function bestOf(userScore, computerScore) {
+
+    let games = userScore + computerScore;
+
+    if (games === 3) {
+        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! How about best of 5?');
+    } else if (games === 5) {
+        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! How about best of 7?');
+    } else if (games === 7) {
+        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! Contiue Playing?');
+    };
+    
+    console.log(games);
+    return games;
+};
+
 
 // Restart Game Button Function
 
