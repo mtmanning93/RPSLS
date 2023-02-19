@@ -80,8 +80,12 @@ function playGame(userChoice, compChoice) {
         || (userChoice === 'lizard' && (compChoice === 'paper' || compChoice === 'spock')) 
         || (userChoice === 'spock' && (compChoice === 'rock' || compChoice === 'scissors'))) {
         userScore ++;
+        compImage.style.borderColor = 'black';
+        userImage.style.borderColor = 'rgba(72, 255, 0, 0.83)';
     } else {
         computerScore ++;
+        compImage.style.borderColor = 'rgba(72, 255, 0, 0.83)';
+        userImage.style.borderColor = 'black';
     };
    
     userScoreboard.innerHTML = `${username}` + ' ' + userScore + ' ';
