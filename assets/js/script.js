@@ -20,6 +20,22 @@ function enterGame() {
 
     document.getElementById('opening-section').classList.add('hidden');
     document.getElementById('game-section').classList.remove('hidden');
+
+    /** 
+     * Loop through the hand-button class.
+     * Listen to click event on hand choice button.
+     * Take the value attribute of the clicked button.
+     * Call both compareChoice() and bestOf() functions.
+     */
+    for (let hand of hands) {
+        hand.addEventListener('click', function () {
+    
+            userChoice = this.getAttribute("value");
+    
+            compareChoice(userHand(userChoice), getComputerChoice());
+            
+        });
+    };
 };
 
 /**
@@ -37,22 +53,6 @@ function getComputerChoice() {
     compImage.style.backgroundImage = compSelection;
 
     return compChoice;
-};
-
-/** 
-* Loop through the hand-button class.
-* Listen to click event on hand choice button.
-* Take the value attribute of the clicked button.
-* Call both compareChoice() and bestOf() functions.
-*/
-for (let hand of hands) {
-    hand.addEventListener('click', function () {
-
-        userChoice = this.getAttribute("value");
-
-        compareChoice(userHand(userChoice), getComputerChoice());
-        
-    });
 };
 
 /**
