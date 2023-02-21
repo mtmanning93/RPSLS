@@ -99,10 +99,14 @@ function playGame(userChoice, compChoice) {
         userScoreboard.innerHTML = `${username}` + ' ' + userScore + ' ';
         compScoreboard.innerHTML = ' ' + computerScore + ' Computer';
 
-        bestOf(userScore, computerScore);
+        /**
+         * Set delay for prompt to show after score incrementation
+         */
+        setTimeout(() => {
+            bestOf(userScore, computerScore);
+          }, 400)
 
     }
-   
 
     return (userScore, computerScore);
 };
