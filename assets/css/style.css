@@ -108,6 +108,22 @@ h2, h3 {
 
 /* Username Input */
 
+#username-input-wrapper {
+    background-image: url(../images/user.webp);
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    background-color: white;
+    margin: 20px 0;
+}
+
 #username {
     font-size: 1.5em;
     text-align: center;
@@ -144,7 +160,7 @@ h2, h3 {
 
 /* Game Area */
 
-#game-area {
+#game-area, #initial-container {
     width: 65%;
     margin: 0 auto;
     display: flex;
@@ -161,7 +177,7 @@ h2, h3 {
     border-radius: 50%;
     border: 4px solid #000000;
     background-color: white;
-    margin: 20px 0;
+    margin: 20px 5px;
 }
 
 
@@ -277,7 +293,7 @@ h2, h3 {
         overflow: auto;
     }
 
-    #game-area {
+    #initial-container {
         flex-direction: column;
     }
 
@@ -285,9 +301,56 @@ h2, h3 {
         width: 95%;
         margin: 0 auto 10px;
     }
-  }
+
+    #game-area {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .show-hand {
+        width: 250px;
+        height: 250px;
+        background-size: contain;
+    }
+}
 
   @media screen and (max-width: 700px) {
+
+    #username-input-wrapper {
+        width: 250px;
+        height: 250px;
+        background-size: contain;
+    }
+
+    /* Game Area */
+    
+    #scoreboard {
+        font-size: 1.5em;
+    }
+
+    #score-area>h2 {
+        font-size: 1.5em;
+    }
+
+    #game-area {
+        padding: 0;
+    }
+
+    .show-hand {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+  @media screen and (max-width: 500px) {
+
+    #title>h2 {
+        font-size: 1em;
+    }
 
     #left-buttons, #right-buttons {
         display: flex;
@@ -302,22 +365,7 @@ h2, h3 {
         margin: 5px 0;
     }
 
-    #scoreboard {
-        font-size: 1.5em;
-    }
-
-    #score-area>h2 {
-        font-size: 1.5em;
-  }
-}
-
-  @media screen and (max-width: 500px) {
-
-    #title>h2 {
-        font-size: 1em;
-    }
-
-    #game-area {
+    #initial-container, #game-area {
         width: 100%;
         border: none;
         border-top: 4px black solid;
@@ -330,4 +378,42 @@ h2, h3 {
         border: none;
     }
 
+    /* Game Area */
+
+    #game-area {
+        flex-direction: column;
+    }
+
+    .show-hand {
+        margin: 5px 0;
+    }
+
   }
+
+@media screen and (max-width: 380px) {
+
+    #title {
+        padding-top: 10px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #title>h2 {
+        font-size: 0.8em;
+    }
+
+    .hand-buttons {
+        width: 80px;
+        height: 80px;
+    }
+}
