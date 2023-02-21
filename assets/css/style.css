@@ -181,7 +181,7 @@ h2, h3 {
 }
 
 
-.human-hand {
+#human-hand {
     background-image: url(../images/user.webp);
     background-position: center;
     text-align: center;
@@ -399,7 +399,6 @@ h2, h3 {
     h1 {
         font-size: 3em;
     }
-
 }
 
 @media screen and (max-width: 340px) {

@@ -2,7 +2,7 @@ const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
 const userScoreboard = document.querySelector('#user-scoreboard');
 const compScoreboard = document.querySelector('#comp-scoreboard');
-let userImage = document.getElementsByClassName('human-hand')[1];
+let userImage = document.getElementById('human-hand');
 let compImage = document.getElementById('comp-hand');
 let userChoice;
 let userScore = 0;
