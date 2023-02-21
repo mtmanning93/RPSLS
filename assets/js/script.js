@@ -29,11 +29,11 @@ function enterGame() {
      */
     for (let hand of hands) {
         hand.addEventListener('click', function () {
-    
+
             userChoice = this.getAttribute("value");
-    
+
             compareChoice(userHand(userChoice), getComputerChoice());
-            
+
         });
     };
 };
@@ -45,10 +45,10 @@ function enterGame() {
 function getComputerChoice() {
 
     const randomNum = Math.floor(Math.random() * choices.length);
-    
+
     const compChoice = choices[randomNum];
     const compSelection = `url(./assets/images/${choices[randomNum]}.png)`;
-    
+
     compImage.style.backgroundRepeat = 'no-repeat';
     compImage.style.backgroundImage = compSelection;
 
@@ -78,16 +78,16 @@ function compareChoice(userChoice, compChoice) {
         compImage.style.borderColor = 'black';
         userImage.style.borderColor = 'black';
     } else {
-        if ((userChoice === 'rock' && (compChoice === 'scissors' || compChoice === 'lizard')) 
-            || (userChoice === 'paper' && (compChoice === 'rock' || compChoice === 'spock')) 
-            || (userChoice === 'scissors' && (compChoice === 'paper' || compChoice === 'lizard')) 
-            || (userChoice === 'lizard' && (compChoice === 'paper' || compChoice === 'spock')) 
-            || (userChoice === 'spock' && (compChoice === 'rock' || compChoice === 'scissors'))) {
-                userScore ++;
-                compImage.style.borderColor = 'black';
-                userImage.style.borderColor = 'rgba(72, 255, 0, 0.83)';
+        if ((userChoice === 'rock' && (compChoice === 'scissors' || compChoice === 'lizard')) ||
+            (userChoice === 'paper' && (compChoice === 'rock' || compChoice === 'spock')) ||
+            (userChoice === 'scissors' && (compChoice === 'paper' || compChoice === 'lizard')) ||
+            (userChoice === 'lizard' && (compChoice === 'paper' || compChoice === 'spock')) ||
+            (userChoice === 'spock' && (compChoice === 'rock' || compChoice === 'scissors'))) {
+            userScore++;
+            compImage.style.borderColor = 'black';
+            userImage.style.borderColor = 'rgba(72, 255, 0, 0.83)';
         } else {
-            computerScore ++;
+            computerScore++;
             compImage.style.borderColor = 'rgba(72, 255, 0, 0.83)';
             userImage.style.borderColor = 'black';
         }
@@ -100,7 +100,7 @@ function compareChoice(userChoice, compChoice) {
          */
         setTimeout(() => {
             bestOf(userScore, computerScore);
-          }, 500);
+        }, 500);
     };
 
     return (userScore, computerScore);

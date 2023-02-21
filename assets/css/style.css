@@ -20,7 +20,7 @@ body {
     background-attachment: fixed;
 }
 
-/* Headings */ 
+/* Headings */
 
 h1 {
     font-family: Kanit, sans-serif;
@@ -31,7 +31,8 @@ h1 {
     line-height: 50px;
 }
 
-h2, h3 {
+h2,
+h3 {
     text-align: center;
 }
 
@@ -160,7 +161,8 @@ h2, h3 {
 
 /* Game Area */
 
-#game-area, #initial-container {
+#game-area,
+#initial-container {
     width: 65%;
     margin: 0 auto;
     display: flex;
@@ -196,7 +198,8 @@ h2, h3 {
     background-position: center;
 }
 
-.name, #username-game {
+.name,
+#username-game {
     width: 100%;
     font-weight: 400;
     background-color: #380477;
@@ -232,7 +235,8 @@ h2, h3 {
     padding-bottom: 5px;
 }
 
-#user-scoreboard, #comp-scoreboard {
+#user-scoreboard,
+#comp-scoreboard {
     display: flex;
     width: 30%;
     align-items: center;
@@ -280,9 +284,9 @@ h2, h3 {
         margin: 0 10px;
     }
 
-  }
+}
 
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
     .hand-buttons {
         width: 100px;
@@ -317,7 +321,7 @@ h2, h3 {
     }
 }
 
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
     #username-input-wrapper {
         width: 250px;
@@ -326,7 +330,7 @@ h2, h3 {
     }
 
     /* Game Area */
-    
+
     #scoreboard {
         font-size: 1.5em;
     }
@@ -346,13 +350,14 @@ h2, h3 {
 
 }
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
     #title>h2 {
         font-size: 1em;
     }
 
-    #left-buttons, #right-buttons {
+    #left-buttons,
+    #right-buttons {
         display: flex;
         flex-direction: column;
     }
@@ -365,7 +370,8 @@ h2, h3 {
         margin: 5px 0;
     }
 
-    #initial-container, #game-area {
+    #initial-container,
+    #game-area {
         width: 100%;
         border: none;
         border-top: 4px black solid;
@@ -388,7 +394,7 @@ h2, h3 {
         margin: 5px 0;
     }
 
-  }
+}
 
 @media screen and (max-width: 380px) {
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +14,11 @@
     <title>R.P.S.L.S</title>
 </head>
 
-<body onLoad="document.getElementById('username').focus()";>
+<body onLoad="document.getElementById('username').focus()" ;>
     <div id="title">
         <h1>R.P.S.L.S</h1>
         <h2>Rock.Paper.Scissors.Lizard.Spock</h2>
-    </div>  
+    </div>
 
     <div id="selection">
         <div id="left-buttons">
@@ -38,7 +39,8 @@
                 <img src="assets/images/lizard.png" alt="A symbol of a hand shaped like a lizards head">
             </button>
             <button value="spock" class="hand-buttons">
-                <img src="assets/images/spock.png" alt="A symbol of a hand shaped like the Star Trek character Spocks hand signal">
+                <img src="assets/images/spock.png"
+                    alt="A symbol of a hand shaped like the Star Trek character Spocks hand signal">
             </button>
         </div>
     </div>
@@ -59,7 +61,8 @@
             </div>
             <div id="video">
                 <h2 id="rules-heading">Its very simple...</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" frameborder="0"
+                    title="YouTube video player" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -69,7 +72,7 @@
                 Paper covers Rock <i class="fa-solid fa-hand"></i>
                 Rock crushes Lizard <i class="fa-solid fa-hand-scissors"></i>
                 Lizard poisons Spock <i class="fa-solid fa-hand-lizard"></i>
-                Spock smashes Scissors <i class="fa-solid fa-hand-spock"></i> 
+                Spock smashes Scissors <i class="fa-solid fa-hand-spock"></i>
                 <br>
                 Scissors decapitates Lizard <i class="fa-solid fa-hand-back-fist"></i>
                 Lizard eats Paper <i class="fa-solid fa-hand"></i>
@@ -96,15 +99,18 @@
             <h2>Scoreboard</h2>
             <div id="scoreboard">
                 <div id="user-scoreboard">0</div>
-                <div id="seperator"><h2><strong> : </strong></h2></div>
+                <div id="seperator">
+                    <h2><strong> : </strong></h2>
+                </div>
                 <div id="comp-scoreboard">0</div>
             </div>
             <button id="reset" onclick="restartGame()">Reset Game!</button>
         </div>
     </div>
-    
+
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/3440ecbefc.js" crossorigin="anonymous"></script>
-    
+
 </body>
+
 </html>
