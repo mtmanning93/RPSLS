@@ -51,6 +51,11 @@ h3 {
 
 /* Hand seclection buttons */
 
+img {
+    width: 200px;
+    height: auto;
+}
+
 #selection {
     display: flex;
     margin: 20px auto;
@@ -317,7 +322,7 @@ h3 {
     .show-hand {
         width: 250px;
         height: 250px;
-        background-size: contain;
+        background-size: auto;
     }
 }
 
