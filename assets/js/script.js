@@ -1,8 +1,12 @@
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
+const userScoreboard = document.querySelector('#user-scoreboard');
+const compScoreboard = document.querySelector('#comp-scoreboard');
 let userImage = document.getElementsByClassName('human-hand')[1];
 let compImage = document.getElementById('comp-hand');
 let userChoice;
+let userScore = 0;
+let computerScore = 0;
 
 /**
  * On enterGame function take input type username value and add it to the username space on the gameboard.
@@ -10,19 +14,19 @@ let userChoice;
  * After collecting the name input, add a class of 'hidden' to all of the index.html elements.
  * Remove the 'hidden' class from game.html elements. 
  */
-
 function enterGame() {
     username = document.getElementById('username-input').value;
     document.getElementById("username-game").innerHTML = username;
 
-    document.getElementById('opening-page').classList.add('hidden');
-    document.getElementById('game-page').classList.remove('hidden');
+    document.getElementById('opening-section').classList.add('hidden');
+    document.getElementById('game-section').classList.remove('hidden');
 };
 
-// Enable computer decision
-// Show computer choice where compImage is
-
-function computerHand() {
+/**
+ * Enable computer decision.
+ * Change computer image to chosen hand image.
+ */
+function getComputerChoice() {
 
     const randomNum = Math.floor(Math.random() * choices.length);
     
@@ -36,45 +40,37 @@ function computerHand() {
 };
 
 /** 
-* Loop through the hand-button class
-* Listen to click event on hand choice button
-* Take the value attribute of the clicked button
-* Call both playGame() and bestOf() functions
+* Loop through the hand-button class.
+* Listen to click event on hand choice button.
+* Take the value attribute of the clicked button.
+* Call both compareChoice() and bestOf() functions.
 */
-
 for (let hand of hands) {
     hand.addEventListener('click', function () {
 
         userChoice = this.getAttribute("value");
 
-        playGame(userHand(userChoice), computerHand());
+        compareChoice(userHand(userChoice), getComputerChoice());
         
     });
 };
 
-// Change the image of the user to the userChoice image
-
+/**
+ * Change userImage to the userChoice image.
+ */
 function userHand(userChoice) {
 
     userImage.style.backgroundImage = `url(./assets/images/${userChoice}.png)`;
     userImage.style.backgroundRepeat = 'no-repeat';
-   
-    console.log(userChoice);
-    console.log(userImage.style.backgroundImage);
 
     return userChoice;
 };
 
-// Get a result and return the score of both choices
-
-const userScoreboard = document.querySelector('#user-scoreboard');
-const compScoreboard = document.querySelector('#comp-scoreboard');
-let userScore = 0;
-let computerScore = 0;
-
-function playGame(userChoice, compChoice) {
-
-    console.log(userChoice, compChoice)
+/**
+ * Get a result and return the score by comparing both choices.
+ * Increment score if a win from either side occurs.
+ */
+function compareChoice(userChoice, compChoice) {
 
     if (userChoice === compChoice) {
         userScore;
@@ -100,38 +96,38 @@ function playGame(userChoice, compChoice) {
         compScoreboard.innerHTML = ' ' + computerScore + ' Computer';
 
         /**
-         * Set delay for prompt to show after score incrementation
+         * Set delay for prompt to show after score incrementation.
          */
         setTimeout(() => {
             bestOf(userScore, computerScore);
-          }, 400)
-
-    }
+          }, 500);
+    };
 
     return (userScore, computerScore);
 };
 
-// Best Of if else Function
-
+/**
+ * Show an alert when total number of games equals 7, 15 and 23.
+ * Show user score vs. comuter score.
+ */
 function bestOf(userScore, computerScore) {
 
     let games = userScore + computerScore;
 
-    if (games === 3) {
-        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! That was best of 3. How about best of 5?');
-    } else if (games === 5) {
-        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! That was best of 5. How about best of 7?');
-    } else if (games === 7) {
-        alert(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '! That was best of 7. Shall we contiue Playing?');
+    if (games === 7) {
+        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 7. How about best of 15?');
+    } else if (games === 15) {
+        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 15. How about best of 23?');
+    } else if (games === 23) {
+        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 23. Shall we contiue Playing?');
     };
-    
-    console.log(games);
+
     return games;
 };
 
-
-// Restart Game Button Function
-
+/**
+ * Restart game button function.
+ */
 function restartGame() {
     window.location.reload();
 };
