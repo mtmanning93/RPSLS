@@ -10,9 +10,10 @@
     <!-- Favicon -->
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>RPSLS</title>
+    <title>R.P.S.L.S</title>
 </head>
-<body>
+
+<body onLoad="document.getElementById('username').focus()";>
     <div id="title">
         <h1>R.P.S.L.S</h1>
         <h2>Rock.Paper.Scissors.Lizard.Spock</h2>
@@ -52,9 +53,10 @@
             </div>
             <div id="video">
                 <h2 id="rules-heading">Its very simple...</h2>
-                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" frameborder="0" allowfullscreen></iframe>-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/405Nh2H4Ucg" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
+
         <div id="game-rules">
             <h2>Rules</h2>
             <p>Scissors cuts Paper <i class="fa-solid fa-hand-back-fist"></i>
@@ -83,6 +85,7 @@
                 <h2 class="name">Computer</h2>
             </div>
         </div>
+
         <div id="score-area">
             <h2>Scoreboard</h2>
             <div id="scoreboard">
@@ -96,5 +99,6 @@
     
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/3440ecbefc.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
