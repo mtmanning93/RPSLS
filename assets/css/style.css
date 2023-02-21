@@ -99,14 +99,14 @@ h2, h3 {
 
 /* Username Input */
 
-#username-input {
+#username {
     font-size: 1.5em;
     text-align: center;
 }
 
 /* Play game / Submit username Button */
 
-#submit-button {
+#submit {
     font-size: 1.5em;
     border: 2px solid #ffffff;
     border-radius: 5px;
@@ -115,7 +115,7 @@ h2, h3 {
     color: white;
 }
 
-#submit-button:hover {
+#submit:hover {
     cursor: pointer;
     font-size: 1.75em;
     transition: 0.8s;

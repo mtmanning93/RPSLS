@@ -15,7 +15,7 @@ let computerScore = 0;
  * Remove the 'hidden' class from game.html elements. 
  */
 function enterGame() {
-    username = document.getElementById('username-input').value;
+    username = document.getElementById('username').value;
     document.getElementById("username-game").innerHTML = username;
 
     document.getElementById('opening-section').classList.add('hidden');
