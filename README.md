@@ -66,3 +66,60 @@ The site is targeted towards both adults and children looking to make a decsion 
 
 ## Testing
 
+### Lighthouse
+
+A lighthouse analysis was conducted on the site. Giving the following results:
+
+![Lighthouse analysis results](./assets/images/screenshots/lighthouse-scores.png)
+
+Initially an issue arose due to low performance, however it became clear that this was due to an AdBlocker preventing certain element froms loading easily. When switching of the AdBlocker and testing also on different browser the score dramatically improved.
+
+### Validator Testing
+
+ - HTML
+    - Here is a link to the results of the official W3C Validator which returned no errors. [Validated HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmtmanning93.github.io%2FRPSLS%2F)
+
+- CSS
+    - Here is a link to the results of the official Jigsaw Validator which returned no errors. [Validated CSS](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fmtmanning93.github.io%2FRPSLS%2F&usermedium=all&vextwarning=&warning=1)
+
+- JavaScript
+    - Here is a link to the results of the JSHint Validator which returned no errors. [JSHiint](https://jshint.com/)
+
+The following Metrics were returned:
+- There are 8 functions in this file.
+- Function with the largest signature take 2 arguments, while the median is 0.
+- Largest function has 14 statements in it, while the median is 4.5.
+- The most complex function has a cyclomatic complexity value of 17 while the median is 1.
+
+When running the Javascript through the JSHint validator one warning was returned:
+> Functions declared within loops referencing an outer scoped variable may lead to confusing semantics.
+
+One 'unused variable' was also returned:
+> enterGame
+Although enterGame is in fact a function. Research showed that it is in fact possible to surpress this warning in the settings of JSHint or with some extra commented code specific to JSHint.
+
+
+### Browser Testing
+
+The site has been tested across 4 different browsers: 
+- Edge
+- Chrome
+- Firefox
+- Safari. 
+
+A problem occured when in the final browser, Safari, the background images were not displaying, which wuld cause issues within the JavaScript logic also. To counter this issue the images used had to be converted from webp to jpg format. Once this change was applied the backgrounds were visible across all browsers, and no further issues were detected.
+
+### Screen Testing
+
+The site was also tested across different screen sizes, in both portrait and landscape when possible. 
+These screens include:
+- Laptop
+- Phone
+    - iPhone X
+    - Samsung Xcover 5
+- Tablet
+    - iPad
+- Desktop Monitor
+
+
+
