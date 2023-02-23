@@ -51,6 +51,11 @@ h3 {
 
 /* Hand seclection buttons */
 
+img {
+    width: 165px;
+    height: 165px;
+}
+
 #selection {
     display: flex;
     margin: 20px auto;
@@ -118,6 +123,7 @@ video {
 #username-input-wrapper {
     background-image: url('../images/user.jpg');
     background-position: center;
+    background-size: cover;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -288,6 +294,10 @@ video {
 
     .hand-buttons {
         margin: 0 10px;
+    }
+
+    img {
+        height: auto;
     }
 
 }
