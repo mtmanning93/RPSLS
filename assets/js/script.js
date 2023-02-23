@@ -2,6 +2,7 @@ const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
 const userScoreboard = document.querySelector('#user-scoreboard');
 const compScoreboard = document.querySelector('#comp-scoreboard');
+let username = document.getElementById('username');
 let userImage = document.getElementById('human-hand');
 let compImage = document.getElementById('comp-hand');
 let userChoice;
@@ -35,8 +36,8 @@ function enterGame() {
             compareChoice(userHand(userChoice), getComputerChoice());
 
         });
-    };
-};
+    }
+}
 
 /**
  * Enable computer decision.
@@ -53,7 +54,7 @@ function getComputerChoice() {
     compImage.style.backgroundImage = compSelection;
 
     return compChoice;
-};
+}
 
 /**
  * Change userImage to the userChoice image.
@@ -64,7 +65,7 @@ function userHand(userChoice) {
     userImage.style.backgroundRepeat = 'no-repeat';
 
     return userChoice;
-};
+}
 
 /**
  * Get a result and return the score by comparing both choices.
@@ -73,8 +74,6 @@ function userHand(userChoice) {
 function compareChoice(userChoice, compChoice) {
 
     if (userChoice === compChoice) {
-        userScore;
-        computerScore;
         compImage.style.borderColor = 'black';
         userImage.style.borderColor = 'black';
     } else {
@@ -101,10 +100,10 @@ function compareChoice(userChoice, compChoice) {
         setTimeout(() => {
             bestOf(userScore, computerScore);
         }, 500);
-    };
+    }
 
     return (userScore, computerScore);
-};
+}
 
 /**
  * Show an alert when total number of games equals 7, 15 and 23.
@@ -120,25 +119,25 @@ function bestOf(userScore, computerScore) {
         message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of ${games}. How about best of 15?\n(Press OK to continue or cancel to restart game)`);
         if (!message) {
             restartGame();
-        };
+        }
     } else if (games === 15) {
         message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 23?\n(Press OK to continue or cancel to restart game)`);
         if (!message) {
             restartGame();
-        };
+        }
     } else if (games === 23) {
         message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 23. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
         if (!message) {
             restartGame();
-        };
-    };
+        }
+    }
 
     return games;
-};
+}
 
 /**
  * Restart game button function.
  */
 function restartGame() {
     window.location.reload();
-};
+}
