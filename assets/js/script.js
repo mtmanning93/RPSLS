@@ -121,12 +121,12 @@ function bestOf(userScore, computerScore) {
             restartGame();
         }
     } else if (games === 15) {
-        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 23?\n(Press OK to continue or cancel to restart game)`);
+        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 30?\n(Press OK to continue or cancel to restart game)`);
         if (!message) {
             restartGame();
         }
-    } else if (games === 23) {
-        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 23. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
+    } else if (games === 30) {
+        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 30. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
         if (!message) {
             restartGame();
         }
