@@ -51,11 +51,6 @@ h3 {
 
 /* Hand seclection buttons */
 
-img {
-    width: 200px;
-    height: auto;
-}
-
 #selection {
     display: flex;
     margin: 20px auto;

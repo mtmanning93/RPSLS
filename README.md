@@ -59,3 +59,10 @@ The site is targeted towards both adults and children looking to make a decsion 
     * When playing the game a confirmation pop up is displayed when the combined scores reach 7, 15 or 30. Giving the results and the opportunity to continue playing or reset the game. This provides the user with a set number of possible games to make their decision.
 
 ![Confirmation alert when combined scores total 7, 15 or 30](./assets/images/screenshots/best-of.png)
+
+## Features to Implement
+
+-  Another feature to add in the future is another type of game when 2 different users could play. This could be achieved by bothe selecting a hand but not displaying either until the second user has chosen theirs. Creating a 'user vs user' game.
+
+## Testing
+
