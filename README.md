@@ -121,5 +121,19 @@ These screens include:
     - iPad
 - Desktop Monitor
 
+### Unfixed Bugs
+
+## Deployment
+
+- The site was deployed via GitHub pages. The following steps were carried out to deploy the project:
+    - In the RPSLS GitHub repository
+    - Navigate to the settings tab
+    - From the menu on the left select the 'Pages' item
+    - Select Main branch from the branch selection drop down menu and click save
+    - After a few minutes the page can be refreshed leavin the visit site section at the top containing the deployed sites link
+
+The live RPSLS site can be found via this link - [https://mtmanning93.github.io/RPSLS/](https://mtmanning93.github.io/RPSLS/)
+
+## Credits
 
 
