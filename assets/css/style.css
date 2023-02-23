@@ -53,7 +53,7 @@ h3 {
 
 img {
     width: 165px;
-    height: 165px;
+    height: auto;
 }
 
 #selection {
@@ -294,10 +294,6 @@ video {
 
     .hand-buttons {
         margin: 0 10px;
-    }
-
-    img {
-        height: auto;
     }
 
 }
