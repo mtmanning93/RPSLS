@@ -16,7 +16,7 @@
 /* Background */
 
 body {
-    background: url(../images/space-background.webp) no-repeat center center;
+    background: url('../images/space-background.jpg') no-repeat center center;
     background-attachment: fixed;
 }
 
@@ -121,7 +121,7 @@ video {
 /* Username Input */
 
 #username-input-wrapper {
-    background-image: url(../images/user.webp);
+    background-image: url('../images/user.jpg');
     background-position: center;
     text-align: center;
     display: flex;
@@ -195,7 +195,7 @@ video {
 
 
 #human-hand {
-    background-image: url(../images/user.webp);
+    background-image: url('../images/user.jpg');
     background-position: center;
     text-align: center;
     display: flex;
@@ -205,7 +205,7 @@ video {
 }
 
 #comp-hand {
-    background-image: url(../images/comp.webp);
+    background-image: url('../images/comp.jpg');
     background-position: center;
 }
 
