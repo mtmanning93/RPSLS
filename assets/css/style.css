@@ -357,6 +357,7 @@ video {
     .show-hand {
         width: 200px;
         height: 200px;
+        background-size: contain;
     }
 
 }
