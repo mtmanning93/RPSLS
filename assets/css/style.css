@@ -408,6 +408,26 @@ video {
 
 }
 
+@media screen and (max-width: 450px) {
+
+    #scoreboard {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #user-scoreboard, #comp-scoreboard {
+        justify-content: center;
+        width: auto;
+    }
+
+    #seperator {
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 380px) {
 
     #title {
