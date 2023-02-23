@@ -108,18 +108,29 @@ function compareChoice(userChoice, compChoice) {
 
 /**
  * Show an alert when total number of games equals 7, 15 and 23.
- * Show user score vs. comuter score.
+ * Show user score vs. computer score.
+ * On cancel restart game.
  */
 function bestOf(userScore, computerScore) {
 
     let games = userScore + computerScore;
+    let message;
 
     if (games === 7) {
-        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 7. How about best of 15?');
+        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of ${games}. How about best of 15?\n(Press OK to continue or cancel to restart game)`);
+        if (!message) {
+            restartGame();
+        };
     } else if (games === 15) {
-        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 15. How about best of 23?');
+        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 23?\n(Press OK to continue or cancel to restart game)`);
+        if (!message) {
+            restartGame();
+        };
     } else if (games === 23) {
-        confirm(`${username}` + ' ' + userScore + ' : Computer ' + computerScore + '!\nThat was best of 23. Shall we contiue Playing?');
+        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 23. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
+        if (!message) {
+            restartGame();
+        };
     };
 
     return games;
