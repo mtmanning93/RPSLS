@@ -96,8 +96,8 @@ When running the Javascript through the JSHint validator one warning was returne
 
 One 'unused variable' was also returned:
 > enterGame
-Although enterGame is in fact a function. Research showed that it is in fact possible to surpress this warning in the settings of JSHint or with some extra commented code specific to JSHint.
 
+Although enterGame is in fact a function. Research showed that it is in fact possible to surpress this warning in the settings of JSHint or with some extra commented code specific to JSHint.
 
 ### Browser Testing
 
@@ -135,5 +135,23 @@ These screens include:
 The live RPSLS site can be found via this link - [https://mtmanning93.github.io/RPSLS/](https://mtmanning93.github.io/RPSLS/)
 
 ## Credits
+
+### Content
+
+- Font 'Kanit' and its respective styles were taken from [Google Fonts](https://fonts.google.com/).
+
+- Icons used within the rules section were taken from [Font Awesome](https://fontawesome.com/)
+
+- The Favicon was taken from free content site [Icons8](https://icons8.com/icons/set/favicon).
+
+- I created the logical OR section of the 'if else' statement with help from [Free Code Camp](https://forum.freecodecamp.org/t/always-getting-the-same-result-using-if-else-statements-rock-paper-scissors/393217) and [Stack Overflow](https://stackoverflow.com/questions/2363840/how-to-use-or-condition-in-a-javascript-if-statement).
+
+### Media 
+
+- The hands, user and computer icons are from the wireframe created with [Balsamiq](https://balsamiq.com).
+
+- The galaxy background used throughout the site was taken from [Unsplash](https://unsplash.com/photos/E0AHdsENmDg) a free stock image site.
+
+- The main iframe relating to the rules was taken from [Youtube](https://www.youtube.com/embed/405Nh2H4Ucg).
 
 
