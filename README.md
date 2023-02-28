@@ -125,7 +125,7 @@ These screens include:
 
 ### Confirmation Repeat
 
-- To implement a confirmation message which would show after a certain number of games, it required a setTimeout function to ensure it displayed after the scoreboard had changed scores. The original method meant that often and ramdomly it would display twice or more times. To combat this issue the setTimeout function had to be moved from the compareChoice function and instead wrapping the if statement within the bestOf function.
+- To implement a confirmation message which would show after a certain number of games, it required a setTimeout function to ensure it displayed after the scoreboard had changed scores. The original method meant that often and ramdomly it would display twice or more times. To combat this issue the setTimeout function had to be moved from the compareChoice function and instead wrapping the if statement within the bestOf function. This was discovered when removing the original setTimeout function.
 
 ### AdBlocker
 
@@ -154,6 +154,8 @@ The live RPSLS site can be found via this link - [https://mtmanning93.github.io/
 
 - Instructions on how to implement a 'setTimeout()' delay were taken from [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout).
 
+- Information on implementing a refresh page function was taken from [Stack Overflow](https://stackoverflow.com/questions/5480945/refreshing-page-on-click-of-a-button)
+
 ### Content
 
 - Font 'Kanit' and its respective styles were taken from [Google Fonts](https://fonts.google.com/).
@@ -170,6 +172,6 @@ The live RPSLS site can be found via this link - [https://mtmanning93.github.io/
 
 - The galaxy background used throughout the site was taken from [Unsplash](https://unsplash.com/photos/E0AHdsENmDg) a free stock image site.
 
-- The main iframe relating to the rules was taken from [Youtube](https://www.youtube.com/embed/405Nh2H4Ucg).
+- The guide image relating to the rules was taken from [Seek PNG](https://www.seekpng.com/idown/u2w7w7o0i1t4o0a9_rock-paper-scissors-lizard-spock-rock-paper-scissors/).
 
 
