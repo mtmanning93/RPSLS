@@ -1,4 +1,3 @@
-/* jshint esversion: 6 */
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
 const userScoreboard = document.querySelector('#user-scoreboard');

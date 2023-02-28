@@ -83,7 +83,7 @@ Initially, an issue arose due to low performance, however, it became clear that 
     - Here is a link to the results of the official Jigsaw Validator which returned no errors. [Validated CSS](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fmtmanning93.github.io%2FRPSLS%2F&usermedium=all&vextwarning=&warning=1)
 
 - JavaScript
-    - When validating the Javascript with JSHint the use of **'esversion 6'** must be declared, this comment ( /* *jshint esversion: 6* */ ) can be found at the beginning of the script.js file. Here is a link to the results of the JSHint Validator. [JSHiint](https://jshint.com/)
+    - When validating the Javascript with JSHint the use of **'esversion 6'** must be declared, this comment ( /* *jshint esversion: 6* */ ) must be added above the code in JSHint. Here is a link to the results of the JSHint Validator. [JSHiint](https://jshint.com/)
 
 The following Metrics were returned:
 - There are 8 functions in this file.
