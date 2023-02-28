@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const hands = document.getElementsByClassName('hand-buttons');
 const userScoreboard = document.querySelector('#user-scoreboard');
@@ -29,12 +30,9 @@ function enterGame() {
      * Call both compareChoice() and bestOf() functions.
      */
     for (let hand of hands) {
-        hand.addEventListener('click', function (event) {
+        hand.addEventListener('click', function () {
 
             userChoice = this.getAttribute("value");
-
-            console.log(event.target);
-            console.log(userChoice);
 
             compareChoice(userHand(userChoice), getComputerChoice());
 
@@ -97,12 +95,7 @@ function compareChoice(userChoice, compChoice) {
         userScoreboard.innerHTML = `${username}` + ' ' + userScore + ' ';
         compScoreboard.innerHTML = ' ' + computerScore + ' Computer';
 
-        /**
-         * Set delay for prompt to show after score incrementation.
-         */
-        setTimeout(() => {
-            bestOf(userScore, computerScore);
-        }, 500);
+        bestOf(userScore, computerScore);
 
     }
 
@@ -113,30 +106,32 @@ function compareChoice(userChoice, compChoice) {
  * Show an alert when total number of games equals 7, 15 and 23.
  * Show user score vs. computer score.
  * On cancel restart game.
+ * Set delay for prompt to show after score incrementation.
  */
 function bestOf(userScore, computerScore) {
+    setTimeout(() => {
+        let games = userScore + computerScore;
+        let message;
 
-    let games = userScore + computerScore;
-    let message;
+        if (games === 7) {
+            message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of ${games}. How about best of 15?\n(Press OK to continue or cancel to restart game)`);
+            if (!message) {
+                restartGame();
+            }
+        } else if (games === 15) {
+            message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 30?\n(Press OK to continue or cancel to restart game)`);
+            if (!message) {
+                restartGame();
+            }
+        } else if (games === 30) {
+            message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 30. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
+            if (!message) {
+                restartGame();
+            }
+        }
+        return games;
+    }, 500);
 
-    if (games === 7) {
-        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of ${games}. How about best of 15?\n(Press OK to continue or cancel to restart game)`);
-        if (!message) {
-            restartGame();
-        }
-    } else if (games === 15) {
-        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 15. How about best of 30?\n(Press OK to continue or cancel to restart game)`);
-        if (!message) {
-            restartGame();
-        }
-    } else if (games === 30) {
-        message = confirm(`${username} ${userScore} : Computer ${computerScore}!\nThat was best of 30. Shall we contiue Playing?\n(Press OK to continue or cancel to restart game)`);
-        if (!message) {
-            restartGame();
-        }
-    }
-
-    return games;
 }
 
 /**

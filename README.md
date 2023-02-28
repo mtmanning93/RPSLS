@@ -18,7 +18,7 @@ The site is targeted towards both adults and children looking to make a decision
 
     * Before entering the game area there is a call to action, prompting the user to 'Enter Username' before clicking Play Game. Taking the username creates a better experience during gameplay for the user.
 
-    * Included in this area is a playable video where the rules are explained very efficiently by using one of the famous scenes from which the game is most well known.
+    * Included in this area is an image where the rules are explained very efficiently by using a diagram of which hand wins
 
 ![Enter username input](./assets/images/screenshots/enter-username.png)
 
@@ -26,7 +26,7 @@ The site is targeted towards both adults and children looking to make a decision
 
 - Rules
 
-    * To complement the video there are some written rules included underneath to further clarify the game rules and winning hands.
+    * To complement the winning hands image there are some written rules included underneath to further clarify the game rules and winning hands.
 
 ![A written rules area to provide clarity to the winning hands](./assets/images/screenshots/rules.png)
 
@@ -83,7 +83,7 @@ Initially, an issue arose due to low performance, however, it became clear that 
     - Here is a link to the results of the official Jigsaw Validator which returned no errors. [Validated CSS](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fmtmanning93.github.io%2FRPSLS%2F&usermedium=all&vextwarning=&warning=1)
 
 - JavaScript
-    - Here is a link to the results of the JSHint Validator which returned no errors. [JSHiint](https://jshint.com/)
+    - When validating the Javascript with JSHint the use of **'esversion 6'** must be declared, this comment ( /* *jshint esversion: 6* */ ) can be found at the beginning of the script.js file. Here is a link to the results of the JSHint Validator. [JSHiint](https://jshint.com/)
 
 The following Metrics were returned:
 - There are 8 functions in this file.
@@ -123,9 +123,11 @@ These screens include:
 
 ## Fixed Bugs
 
+### Confirmation Bubbling
+
 ### AdBlocker
 
-- After embedding a Youtube video iframe into the site the console would display multiple errors. After extensive research, it was apparent that the issue wasn't being caused by the iframe itself but by the AdBlocker extension which was running in the browser. After removing the AdBlocker no errors appeared.
+- After embedding a Youtube video iframe into the site to explain the rules the console would display multiple errors. After extensive research, it was apparent that the issue wasn't being caused by the iframe itself but by the AdBlocker extension which was running in the browser. After removing the AdBlocker no errors appeared. However this meant that users who used an AdBlocker would also see errors. Therfore the video was changed to an explanatory image for better performance.
 
 - The same AdBlocker issue was responsible for poor performance scores when running a Lighthouse Analysis. When turning the AdBlocker off the performance dramatically improved.
 

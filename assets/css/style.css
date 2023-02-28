@@ -18,6 +18,7 @@
 body {
     background: url('../images/space-background.jpg') no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 /* Headings */
@@ -164,6 +165,7 @@ img {
 /* Rules */
 
 #game-rules {
+    max-width: 1160px;
     width: 65%;
     margin: 20px auto;
     text-align: center;
@@ -176,6 +178,7 @@ img {
 
 #game-area,
 #initial-container {
+    max-width: 1160px;
     width: 65%;
     margin: 0 auto;
     display: flex;
