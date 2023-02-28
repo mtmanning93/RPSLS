@@ -29,9 +29,12 @@ function enterGame() {
      * Call both compareChoice() and bestOf() functions.
      */
     for (let hand of hands) {
-        hand.addEventListener('click', function () {
+        hand.addEventListener('click', function (event) {
 
             userChoice = this.getAttribute("value");
+
+            console.log(event.target);
+            console.log(userChoice);
 
             compareChoice(userHand(userChoice), getComputerChoice());
 
@@ -100,6 +103,7 @@ function compareChoice(userChoice, compChoice) {
         setTimeout(() => {
             bestOf(userScore, computerScore);
         }, 500);
+
     }
 
     return (userScore, computerScore);

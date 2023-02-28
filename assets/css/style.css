@@ -93,9 +93,9 @@ img {
     transition: all 0.3s ease-in-out 0s;
 }
 
-/* Video */
+/* Guide Image */
 
-#video {
+#guide {
     width: 50%;
     display: flex;
     overflow: hidden;
@@ -105,13 +105,14 @@ img {
     margin: 10px 0;
 }
 
-video {
+img {
     width: 100%;
     height: auto;
+    padding-bottom: 10px;
 }
 
 
-#rules-heading {
+#guide-heading {
     color: white;
     font-weight: 400;
     font-size: 2em;
@@ -281,14 +282,22 @@ video {
 
 /* Media Queries */
 
+@media screen and (min-width: 1100px) {
+
+    #guide>img {
+        max-width: 360px;
+    }    
+
+}
+
 @media screen and (max-width: 1000px) {
 
     /* Initial Section */
-    #rules-heading {
+    #guide-heading {
         font-size: 1.5em;
     }
 
-    #video {
+    #guide {
         margin-left: 10px;
     }
 
@@ -313,7 +322,7 @@ video {
         flex-direction: column;
     }
 
-    #video {
+    #guide {
         width: 95%;
         margin: 0 auto 10px;
     }
