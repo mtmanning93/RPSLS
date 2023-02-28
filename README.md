@@ -123,7 +123,9 @@ These screens include:
 
 ## Fixed Bugs
 
-### Confirmation Bubbling
+### Confirmation Repeat
+
+- To implement a confirmation message which would show after a certain number of games, it required a setTimeout function to ensure it displayed after the scoreboard had changed scores. The original method meant that often and ramdomly it would display twice or more times. To combat this issue the setTimeout function had to be moved from the compareChoice function and instead wrapping the if statement within the bestOf function.
 
 ### AdBlocker
 
