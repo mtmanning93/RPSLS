@@ -100,16 +100,17 @@ img {
     width: 50%;
     display: flex;
     overflow: hidden;
-    align-content: flex-end;
+    align-content: space-around;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
+    flex-direction: column;
 }
 
 #guide>img {
-    width: 100%;
     height: auto;
     padding-bottom: 10px;
+    max-width: 360px;
 }
 
 
